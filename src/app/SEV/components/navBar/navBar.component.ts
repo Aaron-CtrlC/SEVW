@@ -2,7 +2,7 @@ import { Component } from '@angular/core';  // Importar el decorador Component
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MaterialModule } from '../../material/material.module';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navBar',  // Corrige esto a 'navBar' si es tu selector
@@ -19,6 +19,9 @@ import { RouterModule } from '@angular/router';
   ],
 })
 export class Navbar {
-
+  constructor(private router: Router) {}
+  navigateToHome() {
+    this.router.navigate(['/SEV']);
+  }
   open = false; // Inicializa la variable 'open'
 }
