@@ -23,10 +23,6 @@ export const routes: Routes = [
     path:'ManualSeñales',
     component:ManualSeñalesComponent,
   },
-  // {
-  //   path:'Educacion',
-  //   component:EducacionComponent,
-  // },
   {
     path: '',
     redirectTo: 'SEV',
@@ -34,7 +30,7 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'SEV/404',
+    redirectTo: 'SEV',
     pathMatch: 'full'
   }
 ];
