@@ -1,0 +1,40 @@
+<mat-sidenav-container class="nav">
+  <!-- Menú lateral (sidenav) - solo visible en pantallas pequeñas -->
+  <mat-sidenav #sidenav mode="side" class="bg-gray-800 text-white md:hidden">
+    <div class="flex flex-col p-4 space-y-4">
+      <button mat-button class="text-white hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        [routerLink]="['/SEV']" (click)="sidenav.close()">
+        Inicio
+      </button>
+      <button mat-button class="text-white hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        [routerLink]="['/noticias']" (click)="sidenav.close()">
+        Noticias
+      </button>
+      <!-- ñ -->
+      <button mat-button class="text-white hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        [routerLink]="['/SobreSev']" (click)="sidenav.close()">
+        Sobre SEV
+      </button>
+
+    </div>
+  </mat-sidenav>
+
+  <!-- Contenido principal -->
+  <mat-sidenav-content>
+    <mat-toolbar class="bg-gray-800 text-white">
+      <!-- Botón de menú que aparece en pantallas pequeñas -->
+      <button mat-icon-button (click)="sidenav.toggle()" class="mr-2 md:hidden">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <!-- Título del sitio -->
+      <h1 class="text-blue-400 hover:text-blue-300">SEV</h1>
+
+      <!-- Menú completo que solo se muestra en pantallas medianas o más grandes -->
+
+    </mat-toolbar>
+
+    <!-- Aquí va el resto del contenido de tu página -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
