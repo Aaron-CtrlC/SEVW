@@ -12,5 +12,5 @@ import { Navbar } from './SEV/components/navBar/navBar.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'sev2.0';
+  title = 'sev';
 }

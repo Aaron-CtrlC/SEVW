@@ -19,5 +19,6 @@ import { RouterModule } from '@angular/router';
   ],
 })
 export class Navbar {
+
   open = false; // Inicializa la variable 'open'
 }
